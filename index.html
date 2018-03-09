@@ -44,13 +44,13 @@
         loveDays = Math.ceil((eTime - sTime) / (1000*60*60*24)),
         loveEle = new CountUp('love-days', 0, loveDays, 0, 3, options);
 
-        setTimeout(function() {
-            if (!loveEle.error) {
-                loveEle.start();
-            } else {
-                document.getElementById('love-days').innerHTML = loveDays;
-            }
-        }, 1000);
+        // setTimeout(function() {
+        //     if (!loveEle.error) {
+        //         loveEle.start();
+        //     } else {
+        //         document.getElementById('love-days').innerHTML = loveDays;
+        //     }
+        // }, 1000);
 
         window.onload = function () {
             raining();

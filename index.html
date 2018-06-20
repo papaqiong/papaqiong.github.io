@@ -34,6 +34,14 @@
         </div>  
     </section>
 
+    <div class="birthday-box">
+        <div class="img-box" id="birthday">
+            <a href="https://papaqiong.github.io/wepoem.html">
+                <img src="./img/birthday.png">
+            </a>
+        </div>
+    </div>
+
     <script src="js/count-up.js"></script>
     <script src="js/rainy.js"></script>
 
@@ -66,7 +74,15 @@
                 
             enCtntEle.addEventListener('click', function() {
                 zhCtntEle.classList.add('zhshow');
-            }, false)
+            }, false);
+
+            var d = new Date(),
+                day = (d.getMonth() + 1) + '-' + d.getDate();
+            if (d.getMonth() === 5 && d.getDate() === 29) {
+                setTimeout(function() {
+                    document.getElementById('birthday').classList.add('scale');
+                }, 4000);
+            }
         }
 
 
@@ -102,9 +118,9 @@
             '6-5': '环境日，一起种树保护环境保护地球~',
             '6-17': '父亲节到了，给老爸打个电话咯~',
             '6-18': '起来一起过端午节了~吃粽子，一起过端午',
-            '6-29': '祝爬爬琼女神生日快乐，撒花~',
+            '6-29': '爬爬琼女神生日快乐~',
             '7-1': '起立，敬礼！！！',
-            '8-1': '岁月静好，有人在背后负重前行。建军节，敬礼！！！',
+            '8-1': '建军节，敬礼！！！',
             '8-17': '七夕节，愿陪你度过每一个七夕情人节~七月七日长生殿啊',
             '8-25': '中元节，不要怕哦，有我陪着你。',
             '9-3': '抗战胜利日。这个爬爬琼专属网站也是不会忘记的哦。',

@@ -82,3 +82,29 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
 @media(max-width:480px) {
 	.intro .slogan { padding: 80px 0 60px; }
 }
+.birthday-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    z-index: 10000;
+}
+
+.birthday-box .img-box {
+    margin: 20px auto 0;
+    transform: scale(0);
+    transition: transform 2s;
+    -webkit-transition: transform 2s ;
+}
+
+.birthday-box .img-box.scale {
+    transform: scale(1);
+}
+
+.birthday-box .img-box img {
+    width: 100%;
+    height: 100%;
+}
+.birthday-box
+.birthday-box

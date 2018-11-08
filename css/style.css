@@ -106,5 +106,9 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     width: 100%;
     height: 100%;
 }
-.birthday-box
-.birthday-box
+
+#we-are {
+    background: url('https://raw.githubusercontent.com/papaqiong/papaqiong.github.io/master/img/we.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -11,9 +11,9 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="we-are">
 
-    <img id="cvs-img" alt="background" src="https://papaqiong.github.io/img/avatar.jpg" style="display: none;">
+    <img id="cvs-img" alt="background" src="https://raw.githubusercontent.com/papaqiong/papaqiong.github.io/master/img/we.jpeg" style="display: none;">
 
     <div id="canvas-box">
         <canvas id="canvas"></canvas>
@@ -66,7 +66,7 @@
         }, 1000);
 
         window.onload = function () {
-            raining();
+            // raining();
             document.getElementById('my-words').innerHTML = getLoveWords();
 
             var enCtntEle = document.getElementById('canvas-box'),
@@ -97,7 +97,7 @@
             };
 
             image.crossOrigin = 'anonymous';
-            image.src = 'https://papaqiong.github.io/img/avatar.jpg';
+            image.src = 'https://raw.githubusercontent.com/papaqiong/papaqiong.github.io/master/img/we.jpeg';
         }
 
         var loveWords = {

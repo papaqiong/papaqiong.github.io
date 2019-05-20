@@ -37,7 +37,6 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     height: auto;
     min-height: 60px;
     margin: 60px auto 0;
-    border: 1px solid #738c0e;
     border-radius: 20px;
 }
 .ween-tit {

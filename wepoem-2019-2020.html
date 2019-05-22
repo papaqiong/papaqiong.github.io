@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我们的诗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="https://xiaohuazheng.github.io/img/favicon.ico">
+    <style type="text/css">
+        body {
+            background: #cbdee2;
+            margin: 0;
+            min-height: 100%;
+        }
+
+        #poem-box {
+            width: 90%;
+            padding: 10px 5% 60px;
+            margin: 0 auto;
+        }
+
+        #poem-box p {
+            color: #333;
+            text-align: left;
+            font-size: 14px;
+}
+    </style>
+</head>
+<body>
+
+<div id="poem-box">
+    <p>抒一年情，未羞。</p>
+    <p>余生若写诗，皆为你而厚。</p>
+    <p>三两岁的时候。</p>
+    <p>谁到你的屋头。</p>
+    <p>任你欺负不曾寻仇。</p>
+    <p>外婆家的时候。</p>
+    <p>看过你的眼眸。</p>
+    <p>小小年纪似高我一头。</p>
+    <p>上坡干活，走在你身后。</p>
+    <p>心里尽想着你会回眸。</p>
+    <p>初开我的情窦。</p>
+    <p>又瞬间关回心头。</p>
+    <p>小男孩的感情流露。</p>
+    <p>似小男孩的年幼。</p>
+    <p>暑假的期待。</p>
+    <p>也变成外婆家的守候。</p>
+    <p>多年过去。</p>
+    <p>那颗未被发现的相思豆。</p>
+    <p>竟孕育着邂逅。</p>
+    <p>似水流过一个年头。</p>
+    <p>阳光也会在笔尖悄悄溜走。</p>
+    <p>不会溜走的。</p>
+    <p>是我一直牵着你的手。</p>
+    <p>也才发现时间是个小偷。</p>
+    <p>偷走一些习惯，偷走一些甜头。</p>
+    <p>搞不丢的。</p>
+    <p>我们都不会让对方搞丢。</p>
+    <p>时光掀开了窗帘。</p>
+    <p>我要起床挣钱养我的小妞。</p>
+    <p>亲亲你的额头。</p>
+    <p>是我余生的守候。</p>
+    <p>暖暖的被窝里头。</p>
+    <p>从背后拉着你的双手。</p>
+    <p>是你要求的背后。</p>
+    <p>我也喜欢的背后。</p>
+    <p>还有一丝丝害羞。</p>
+    <p>比起之前的一丝丝害羞。</p>
+    <p>被子里的裸露。</p>
+    <p>两个人的互搂。</p>
+    <p>你的头放在我的胸口。</p>
+    <p>睡意涌上你的眉头。</p>
+    <p>不断地说话让你睡意全无。</p>
+    <p>我又慢慢的闭上了眼眸。</p>
+    <p>睡意才下眉头。</p>
+    <p>气意又上心头。</p>
+    <p>瞬间把睡意赶走。</p>
+    <p>再不哄还等什么时候。</p>
+    <p>紧紧抱你在胸口。</p>
+    <p>自己找的自己得受。</p>
+    <p>反正自己也喜欢受。</p>
+    <p>谁叫你生气的眼眸。</p>
+    <p>我也曾看过半宿。</p>
+    <p>窗外下起了大雨。</p>
+    <p>我们在床上云雨。</p>
+    <p>任闪电在窗外怒吼。</p>
+    <p>刚好和掉了床头的抖动。</p>
+    <p>打麻将的地方去摘樱桃。</p>
+    <p>晚上不穿睡衣就躺在我胸口。</p>
+    <p>这种机会还能让它溜走。</p>
+    <p>一把搂住你的玉体。</p>
+    <p>这次我竟可以在下面不动。</p>
+    <p>尽情享受。</p>
+    <p>早上醒来八点出头。</p>
+    <p>洗漱好准备出发搜狗。</p>
+    <p>亲吻你的嘴唇，抚摸你的额头。</p>
+    <p>一把抱住，不准我走。</p>
+    <p>宽掉衣服抱住你，眯了小久。</p>
+    <p>才下床头，意上心头。</p>
+    <p>匍匐在床边，新的姿势到手。</p>
+</div>
+
+<script type="text/javascript">
+    (function wrightPoem() {
+        var $box = document.getElementById('poem-box'),
+            poems = $box.innerHTML;
+            index = 0;
+
+        $box.innerHTML = '';
+
+        var timer = setInterval(function() {
+            var current = poems.substr(index, 1),
+                next = poems.substr(index + 1, 1);
+            if (current === '<') {
+                if (next !== '/' && $box.offsetHeight > window.innerHeight) {
+                    window.scrollTo(0, ($box.offsetHeight + 300 ));
+                }
+                index = poems.indexOf('>', index) + 1;
+            } else {
+                index++;
+            }
+
+            if(index > poems.length) {
+                clearInterval(timer);
+            }
+
+            $box.innerHTML = poems.substring(0, index) + (index & 1 ? '_' : '');
+
+        }, 120);
+    })();
+</script>
+</body>
+</html>

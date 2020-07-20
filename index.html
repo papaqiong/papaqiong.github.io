@@ -12,18 +12,11 @@
 </head>
 
 <body id="we-are">
-
-    <img id="cvs-img" alt="background" src="https://raw.githubusercontent.com/papaqiong/papaqiong.github.io/master/img/we.jpeg" style="display: none;">
-
-    <div id="canvas-box">
-        <canvas id="canvas"></canvas>
-    </div>
-
     <section class="intro">
         <div class="slogan">
-            <h4>爬爬琼女神专属</h4>
+            <h4><a href="https://papaqiong.github.io/wepoem.html">琼琼老婆专属</a></h4>
             <h1><span id="love-days"></span><span class="love-days">days</span></h1>
-            <h1 id="my-words"></h1>
+            <h1 id="my-words">陪你走在天际，看繁花满地。</h1>
             <p class="forever-words">勿忘初心，方得始终</p>
 
             <div class="ween-box">
@@ -32,28 +25,19 @@
         </div>  
     </section>
 
-    <div class="birthday-box">
-        <div class="img-box" id="birthday">
-            <a href="https://papaqiong.github.io/wepoem.html">
-                <img src="./img/birthday.png">
-            </a>
-        </div>
-    </div>
-
     <script src="js/count-up.js"></script>
-    <script src="js/rainy.js"></script>
 
     <script>
         var options = {
-            useEasing: true, 
-            useGrouping: true, 
-            separator: ',', 
-            decimal: '.', 
-        },
-        sTime = new Date('2018/04/11 00:00:00').getTime(),
-        eTime = new Date().getTime(),
-        loveDays = Math.ceil((eTime - sTime) / (1000*60*60*24)),
-        loveEle = new CountUp('love-days', 0, loveDays, 0, 3, options);
+                useEasing: true, 
+                useGrouping: true, 
+                separator: ',', 
+                decimal: '.', 
+            },
+            sTime = new Date('2018/04/11 00:00:00').getTime(),
+            eTime = new Date().getTime(),
+            loveDays = Math.ceil((eTime - sTime) / (1000 * 60 * 60 * 24)),
+            loveEle = new CountUp('love-days', 0, loveDays, 0, 3, options);
 
         setTimeout(function() {
             if (!loveEle.error) {
@@ -62,141 +46,6 @@
                 document.getElementById('love-days').innerHTML = loveDays;
             }
         }, 1000);
-
-        window.onload = function () {
-            document.getElementById('my-words').innerHTML = getLoveWords();
-
-            var enCtntEle = document.getElementById('canvas-box'),
-                zhCtntEle = document.getElementById('ween-ctnt-zh');
-                
-            enCtntEle.addEventListener('click', function() {
-                zhCtntEle.classList.add('zhshow');
-            }, false);
-
-            var d = new Date();
-            if (d.getMonth() === 5 && d.getDate() === 18) {
-                setTimeout(function() {
-                    document.getElementById('birthday').classList.add('scale');
-                }, 4000);
-            }
-        }
-
-
-        function raining() {
-            var image = document.getElementById('cvs-img');
-            image.onload = function () {
-                var engine = new RainyDay('canvas', 'cvs-img', window.innerWidth, window.innerHeight);
-                
-                engine.gravity = engine.GRAVITY_NON_LINEAR;
-                engine.trail = engine.TRAIL_DROPS;
-                engine.rain([engine.preset(3, 3, 0.88), engine.preset(5, 5, 0.9), engine.preset(6, 2, 1)], 100);
-            };
-
-            image.crossOrigin = 'anonymous';
-            image.src = 'https://raw.githubusercontent.com/papaqiong/papaqiong.github.io/master/img/we.jpeg';
-        }
-
-        var loveWords = {
-            '1-1': '元旦快乐，愿陪你跨过每一年。',
-            '2-4': '过年咯。陪你走过一个农历年。',
-            '2-14': '情人节快乐，宝贝媳妇儿~',
-            '3-8': '今天是女神节，我的女神节日快乐。',
-            '3-12': '今天是植树节，想栽在你手里。',
-            '3-14': '314情人节，爱你有点甜。',
-            '3-15': '今天消费者权益日，走，一起打假去。',
-            '3-21': '春雨惊春清谷天，夏满芒夏暑相连。春分到咯。',
-            '4-1': 'hey，girl',
-            '4-5': '清明时节雨纷纷，路上行人欲断魂。借问酒家何处有？牧童遥指杏花村。',
-            '4-11': '期待下一个365天',
-            '4-22': '今天是地球日哦，咱俩一起拯救地球吧~',
-            '5-1': '劳动节，动起来！动一次打一次。劳动节快乐~',
-            '5-13': '给妈妈发红包红包红包~',
-            '6-1': '亲爱的小琼宝贝儿童节快乐呀！',
-            '6-5': '环境日，一起种树保护环境保护地球~',
-            '6-17': '父亲节到了，给老爸打个电话咯~',
-            '6-18': '爬爬琼女神生日快乐~',
-            '7-1': '起立，敬礼！！！',
-            '8-1': '建军节，敬礼！！！',
-            '8-17': '七夕快乐，愿陪你度过每一个情人节~还记得七七长生殿',
-            '8-25': '中元节，不要怕哦，有我陪着你。',
-            '9-3': '抗战胜利日。这个爬爬琼专属网站也是不会忘记的哦。',
-            '9-10': '教师节，祝曾经在寒冷的冬天当老师的爬爬琼教师节快乐~',
-            '9-24': '中秋节快乐！好想吃到小时候家里的那种月饼~',
-            '10-1': '哇喔，国庆七天乐开始咯~愿爬爬琼女神玩的开心快乐~',
-            '10-17': '每逢佳节倍思亲。九九重阳，你是爬爬琼专属网站的亲人~',
-            '11-7': '今天立冬了，虽然还不是特别冷，但要记得添衣服哦',
-            '11-22': '感恩节。感恩遇到你，还能一直陪着你。',
-            '12-22': '冬至到咯，穿上厚衣服，还要吃饺子哦~',
-            '12-24': '又是一年平安夜！我一直在这里。',
-            '12-25': '圣诞节快乐！圣诞老人有在袜子里放礼物没？'
-        };
-
-        function getLoveWords() {
-            return '随你走在天际，看繁花满地。'
-            var d = new Date(),
-                day = (d.getMonth() + 1) + '-' + d.getDate();
-
-            var str = loveWords[day];
-            if (str) {
-                return str;
-            } else {
-                return getDefaultWords();
-            }
-        }
-
-        function getDefaultWords() {
-            var strs = [
-                '你和成都。',
-                '陪爬爬琼女神度过漫长岁月',
-                '你星眸如月，眉眼如烟。小生不才，常梦见你。',
-                '随你走在天际，看繁花满地。',
-                '生命的意义在于和你一起拚搏。',
-                '只要有你在，我就会努力。',
-                '喜欢拍照的时候你在我背后那小鸟般的伊人微笑',
-                '弱水三千只取一瓢饮，桑田千里唯寻二人居。',
-                '有生之年，欣喜相逢。',
-                '喜欢你依靠过来的感觉。',
-                '图书馆专心看书的你好美，噢，还有睡觉的时候。',
-                '一点一滴汇成我们的幸福！',
-                '山静水流开画景，鸢飞鱼跃悟天机。',
-                '我该如何表达，何其幸运。',
-                '我想就这样牵着你的手不放开'
-            ];
-
-            return strs[Math.floor(Math.random() * strs.length)]
-        }
-
-        var enWords = [
-            "One needs 3 things to be truly happy living in the world: some thing to do, some one to love, some thing to hope for.",
-            "Whenever you had a bad day, just remember I love you.",
-            "I don't need a perfect relationship, I just need someone who won't give up on me.",
-            "Hope that next time I will accompany you to our home instead of your home.",
-            "I miss you and I want to sleep with you, but I want to wake up with you most",
-            "I love this filling that you are the very person I like to talk before I go to sleep.",
-            "It's really nice for us to meet each other in such a big world.",
-            "To accompany you to the end of life is the most serious thing I have ever done."
-        ];
-        var edWords = [
-            "I wish the world could be so small that I can meet you when I turn back.",
-            "If someone asks me why I love you, I think I could only answer it's because of you and me.",
-            "I wish that sun would be warm, wind would be cozy, time would be gorgeous and we would be fine.",
-            "I wish some day I could say goodnight to you without my phone, because you're my side.",
-            "As long as you are with me ,I don't care where we go.",
-            "I am in love with my wife just as I was when we first met. This is the best time of my life.",
-        ];
-        
-        var enzhWords = [
-            "You are my today and all of my tomorrows. 你是我的今天和所有的明天。",
-            "They tell you in school that it’s the lungs that keep you breathing but it’s your heart.学校曾教导我们，人要靠肺呼吸存活。事实上，我靠的是你的心。",
-            "If I could, I would wrap my arms around you and just hold you until the hurt went away.如果可以的话，我希望能拥你入怀，紧紧抱住，直到把你的伤心驱散。",
-            "To the very best of times, Baby.致那些最好的时光，宝贝。",
-            "You stay a little while and touch me with your smile.停留片刻, 你的笑容就俘获了我.",
-            "When I'm lying wrapped up in your arms The whole world just fades away. The only thing  I hear is the beating of your heart.当我躺在你的臂弯里时，整个世界都消散了。所能听到的，是你的心跳声。",
-            "You came to me like the dawn through the night, just shining like the sun.你走向我，就像晨曦惊艳了夜空，就像正在发光的太阳。",
-            "you make me want to be a better man.你让我想成为一个更好的人。",
-            "With all I am,with all I have ,I promise you all my life.以我之名，用我所有，许你一生。",
-            "I love you once, I love you twice, I love you more than beans and rice.一见倾心，再见倾情，我爱你，此生不渝。"
-        ]
     </script>
 
 </body>

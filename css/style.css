@@ -2,7 +2,7 @@ html { width: 100%; height: 100% }
 body { width: 100%; height: 100%; margin: 0; padding: 0;font-family: 'microsoft yahei', sans-serif; color: #666; background-color: #fff }
 h1, h2, h3, h4, h5, h6 { margin: 0 0 30px; font-family: 'microsoft yahei', sans-serif; font-weight: 700; letter-spacing: 1px }
 p { margin: 0 0 20px; font-size: 16px; line-height: 1.6em }
-a { color: #046556; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; text-decoration: none }
+a { color: #ddd; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; text-decoration: none }
 a:hover, a:focus { text-decoration: none; color: #9b17ef; }
 .intro { position: fixed;left: 0;top: 0;width: 100%;height: 100%; }
 .intro .slogan { padding: 100px 0 60px; text-align: center }
@@ -14,7 +14,7 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     left: 0;
 }
 #love-days {
-    color: #738c0e;
+    color: #5679df;
     font-size: 80px;
 }
 #my-words {
@@ -24,7 +24,7 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     line-height: 36px;
 }
 .love-days {
-    color: #738c0e;
+    color: #dc8b0f;
     font-size: 30px;
     font-family: 'Times New Roman','Microsoft YaHei','sans-serif'; 
 }
@@ -39,14 +39,6 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     margin: 60px auto 0;
     border-radius: 20px;
 }
-.ween-tit {
-    font-size: 14px;
-    text-align: left;
-    padding: 10px;
-    color: #738c0e;
-    margin-bottom: 0;
-    font-family: 'Times New Roman','Microsoft YaHei','sans-serif'; 
-}
 
 #ween-ctnt-en {
     font-size: 16px;
@@ -57,21 +49,8 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
     margin-bottom: 0;
     font-family: 'Times New Roman','Microsoft YaHei','sans-serif'; 
 }
-#ween-ctnt-zh {
-    display: none;
-    font-size: 16px;
-    text-align: left;
-    padding: 10px;
-    color: #150788;
-    line-height: 22px;
-    font-family: 'Times New Roman','Microsoft YaHei','sans-serif'; 
-}
-#ween-ctnt-zh.zhshow {
-    display: block;
-}
 
 @media(min-width:767px) {
-	.info-box { margin-bottom: 30px; }
 	.intro .slogan { padding: 120px 0 60px; }
     #my-words { font-size: 30px; }
     #love-days { font-size: 120px; }
@@ -80,30 +59,6 @@ a:hover, a:focus { text-decoration: none; color: #9b17ef; }
 }
 @media(max-width:480px) {
 	.intro .slogan { padding: 80px 0 60px; }
-}
-.birthday-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    z-index: 10000;
-}
-
-.birthday-box .img-box {
-    margin: 20px auto 0;
-    transform: scale(0);
-    transition: transform 2s;
-    -webkit-transition: transform 2s ;
-}
-
-.birthday-box .img-box.scale {
-    transform: scale(1);
-}
-
-.birthday-box .img-box img {
-    width: 100%;
-    height: 100%;
 }
 
 #we-are {
